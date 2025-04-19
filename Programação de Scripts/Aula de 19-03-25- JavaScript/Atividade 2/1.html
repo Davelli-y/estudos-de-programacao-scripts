@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retangulo ou Quadrado</title>
+</head>
+<body>
+    <h1>
+        Retangulo ou quadrado?
+    </h1>
+    Valor da base: <input type="text" value=" " id="base"> <br>
+    Valor do lado: <input type="text" value=" " id="lado">  <br>   
+    <input type="button" value="Verificar"onclick="verificar()">
+    <hr>
+    <h1>A area é: </h1>
+    <div id="res"></div>
+    <h1> A figura é um: </h1>
+    <div id="fig"></div>
+<script>
+    function verificar(){
+        var n1= parseFloat(base.value);
+        var n2= parseFloat(lado.value);
+        var area= n1*n2;
+        var op1= 'quadrado'
+        var op2= 'retangulo'
+        res.innerHTML= area
+        if (n1==n2)
+           fig.innerHTML= op1
+        else fig.innerHTML=op2
+            
+        
+    }
+</script>
+</body>
+</html>

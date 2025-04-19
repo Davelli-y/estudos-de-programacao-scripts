@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montadoras</title>
+</head>
+<body>
+    <h1>Montadoras</h1>
+    <input type="button" value="Exibir" id="btExibir">
+    <div id="res"></div>
+    <input type="button" value="Esconder" id="btEsconder">
+    <script>
+        //btEsconder é um objeto
+        // addEventListener é um método (pois tem '.'ligado ao objeto)
+    btExibir.addEventListener("click", exibir);// abrir fechar paranteses denota alguma ação.
+    btEsconder.addEventListener("click",esconder);
+    btEsconder.style.visibility = 'hidden';
+    function exibir() {// Array é uma classe
+        var montadora = new Array("Ford", "Volkswagen", "Renault", "GM", "Honda"); //Ford é um elemento do objeto montadora
+        res.innerHTML=""
+        for (var i=0; i< montadora.length; i++) // length é adequado pois a array é dinamico e pode mudar.
+        res.innerHTML+=montadora[i]+"<br>"; //+= concatena
+        btExibir.disabled = true;
+        btEsconder.style.visibility='visible';
+    }
+    function esconder(){
+        res.innerHTML='';
+        btExibir.disabled= false;
+        btEsconder.style.visibility='hidden'
+    }
+    
+    </script>
+</body>
+</html>

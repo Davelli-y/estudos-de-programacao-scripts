@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par</title>
+</head>
+<body>
+    <h1 style="text-align: center;""> Par ou impar</h1>
+    Digite um numero inteiro:
+
+<input type="text"id="num"><br>
+<input type="button"value='Identificar'onclick="identificar()">
+<hr>
+<div id="res"></div>
+<script>
+    function identificar(){
+        var n= parseInt(num.value);
+        if (parseInt(num.value)% 2 ==0)
+            res.innerHTML= '<h1>Par<h1>';
+        else
+            res.innerHTML='<h1>Impar<h1>';
+    
+    }
+</script>  
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Imagens</title>
+ <meta charset="UTF-8">
+ </head>
+ <body>
+ <h1>Imagens</h1>
+ <a id="ancora">
+ <img src="./img/lamp-desl.png" border="0" id="lampada">
+ </a>
+ <script>
+ ancora.addEventListener('mouseout', function() { mudar(lampada,
+"./img/lamp-desl.png"); });
+ ancora.addEventListener('mouseover', function() { mudar(lampada,
+"./img/lamp-lig.png"); });
+
+ function mudar(objeto, imagem) {
+ objeto.src = imagem;
+ }
+ </script>
+ </body>
+</html>

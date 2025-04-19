@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+</head>
+<body>
+    <h1>Fatorial</h1>
+Digite um numero inteiro: <input type="text" value="" id="num">
+<input type="button" value="Calcular"onclick="calcular()"> 
+<hr>
+Resposta :
+<div id="res" style="color: green;text-align: center;font-style: italic; "></div>
+<script>
+    function calcular(){
+        var n= parseInt(num.value);
+        var fatorial = 1;
+            for (var i = n; i > 1; i--) {
+                fatorial *= i; 
+            }
+        res.innerHTML= fatorial
+        }
+</script>   
+</body>
+</html>

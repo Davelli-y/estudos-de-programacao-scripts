@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara ou coroa</title>
+</head>
+<body>
+    <h1>Cara ou coroa</h1>
+    <input type="button" value="Sortear" id="btSortear">
+    <div id="area"></div>
+    <div id="estatistica"></div> 
+    
+    
+    <script>
+        var cara = 0
+        var coroa =0
+        btSortear.addEventListener ('click', sortear); 
+        function sortear(){
+            face = Math.floor(Math.random() * 2) + 1 ; // Math.floor vai arredondar e deixar apenas a parte inteira do numero. Começa a contar do 1
+            if (face ==1) 
+                cara++;
+            else 
+                coroa++;
+            area.innerHTML += '<img src= "img/moeda_' + face + '.jpg">';
+            area.style.margin = '25px 0px';
+            area.style.padding= '10px';
+            area.style.backgroundColor = 'rgb(176,224,230)';
+            estatistica.innerHTML= 'Caras: '+cara + '<br> Coroas: '+ coroa + '<br>Total: ' + (cara+coroa);
+
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+</head>
+<body>
+    <h1>Cálculo da Loja</h1>
+    Preço unitário do produto:
+    <input type="text" id="unitario">
+    Quantidade de produtos:
+    <input type="text" id="qtde">
+    Se a quantidade de produtos for maior que 3, terá um desconto de 10%.
+    <input type="button" value="Calcular" onclick="calcular()">
+    <hr>
+
+    <div id="res"></div>
+
+    <script>
+        function calcular(){
+            var unitario = parseFloat(document.getElementById("unitario").value);
+            var qtde = parseFloat(document.getElementById("qtde").value);
+            var res = document.getElementById("res");
+
+            if (qtde > 3) {
+                var total = unitario * qtde;
+                total = total * 0.90; // Aplicando o desconto de 10%
+                res.innerHTML = "Total com desconto: R$ " + total.toFixed(2);
+            } else {
+                var total = unitario * qtde;
+                res.innerHTML = "Total sem desconto: R$ " + total.toFixed(2);
+            }
+        }
+    </script>
+    
+</body>
+</html>

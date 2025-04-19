@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <h1>
+        Calculadora Simples
+    </h1>
+    Valor 1:
+    <input type="text" value=" " id="v1"><br>
+    Valor 2:
+    <input type="text" value=" " id="v2"><br>
+    
+    <input type="button" value="Somar"onclick="calcular('+')">
+    <input type="button" value="Subtrair"onclick="calcular('-')">
+    <input type="button" value="Multiplicar"onclick="calcular('*')">
+    <input type="button" value="Dividir"onclick="calcular('/')">
+    <input type="button" value="Limpar"onclick="limpar()">
+    <hr>
+    <div id="res"></div>
+    <script>
+        function calcular(op){
+            var n1= parseInt(v1.value);
+            var n2= parseInt(v2.value);
+            var nr=0
+            if (op=='+')
+                var nr= n1+n2;
+            else if (op=='-')
+                var nr= n1-n2;
+            else if (op=='*')
+                var nr= n1*n2;
+            else
+            var nr= n1/n2;
+            res.innerHTML = "<h1>" + nr + "</h1>";
+        }
+        function limpar(){
+            v1.value = "0";
+            v2.value = "0";
+            res.innerHTML= "";
+        }
+    </script>
+</body>
+</html>
