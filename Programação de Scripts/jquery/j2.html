@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Efeitos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#titulo").click(function () {
+                $("#detalhe").slideDown("slow");
+            });
+            $("#detalhe").click(function () {
+                $("#detalhe").slideUp("slow");
+            });
+        });
+    </script>
+    <style>
+        #titulo,
+        #detalhe {
+            padding: 16px;
+            width: 40%;
+            text-align: center;
+            background-color: #a2ffec;
+            border: solid 1px #c3c3c3;
+        }
+
+        #detalhe {
+            text-align: justify;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Efeitos</h1>
+    <div id="titulo">A ligeira raposa marrom. Mais informações...</div>
+    <div id="detalhe">A ligeira raposa marrom salta sobre o cão
+        preguiçoso.
+        A ligeira raposa marrom salta sobre o cão preguiçoso.
+        A ligeira raposa marrom salta sobre o cão preguiçoso.
+        A ligeira raposa marrom salta sobre o cão preguiçoso.
+        A ligeira raposa marrom salta sobre o cão preguiçoso.
+        A ligeira raposa marrom salta sobre o cão preguiçoso.
+    </div>
+</body>
+
+</html>

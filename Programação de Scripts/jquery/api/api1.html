@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data e Hora</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#obter").click(function () {
+                $.ajax({
+                    url:
+                        "http://worldtimeapi.org/api/timezone/America/Sao_Paulo",
+                    success: function (resultado) {
+                        $("#info").html(JSON.stringify(resultado));
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>WorldTimeAPI</h1>
+    <input type="button" id="obter" value="Obter Data e Hora" />
+    <div id="info" 
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Data e Hora</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#obter").click(function () {
+                $.ajax({
+                    url: "https://worldtimeapi.org/api/timezone/America/Sao_Paulo",
+                    success: function (resultado) {
+                        var agora = new Date(resultado.datetime);
+                        var mascara = new Intl.NumberFormat('pt-BR', {
+                            minimumIntegerDigits: 2,
+                            minimumFractionDigits: 0
+                        });
+                        var data = agora.getDate() + '/' + (agora.getMonth() + 1) +
+                            '/' + agora.getFullYear() + '<br>';
+                        data += mascara.format(agora.getHours()) + ':' +
+                            mascara.format(agora.getMinutes());
+                        $("#info").html(data);
+                    },
+                    error: function () {
+                        $("#info").html("Erro ao buscar data e hora.");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>WorldTimeAPI</h1>
+    <input type="button" id="obter" value="Obter Data e Hora" />
+    <div id="info" style="margin-top: 10px; font-size: 18px;"></div>
+</body>
+</html>
